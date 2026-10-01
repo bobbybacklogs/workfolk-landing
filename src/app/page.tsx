@@ -368,11 +368,12 @@ function HandoffDiagram() {
           <mpath href="#wire-a" />
         </animateMotion>
       </g>
-      <g>
+      <g opacity={0}>
         <rect x={-26} y={-13} width={52} height={26} rx={13} fill="#fbbf24" />
         <text textAnchor="middle" dy={4} fontSize={10} fontWeight={700} fill="#0a0a0b" fontFamily="monospace">
           JOB
         </text>
+        <animate attributeName="opacity" from={0} to={1} begin="1.5s" dur="0.1s" fill="freeze" />
         <animateMotion dur="3.2s" begin="1.6s" repeatCount="indefinite" rotate={0}>
           <mpath href="#wire-b" />
         </animateMotion>
