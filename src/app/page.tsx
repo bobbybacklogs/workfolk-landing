@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/reveal";
-import { AccessForm } from "@/components/access-form";
+
+const X_URL = "https://x.com/bobbybacklogs";
 
 function Wordmark({ compact = false }: { compact?: boolean }) {
   return (
@@ -48,10 +49,12 @@ function Nav() {
           ))}
         </nav>
         <a
-          href="#access"
+          href={X_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="rounded-full bg-amber-400 px-4 py-2 text-sm font-semibold text-ink transition-transform hover:scale-[1.03] active:scale-95"
         >
-          Get early access
+          Follow the build
         </a>
       </div>
     </header>
@@ -115,7 +118,7 @@ function Hero() {
       <div className="relative mx-auto max-w-6xl px-5 pb-20 pt-16 sm:px-8 sm:pt-24">
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <Reveal>
-            <Eyebrow>Workfolk · Early access</Eyebrow>
+            <Eyebrow>Workfolk · In development</Eyebrow>
             <h1 className="mt-5 text-4xl font-bold leading-[1.08] tracking-tight text-cream sm:text-5xl lg:text-6xl">
               An autonomous team built to move complex work forward.
             </h1>
@@ -126,10 +129,12 @@ function Hero() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="#access"
+                href={X_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-ink transition-transform hover:scale-[1.03] active:scale-95"
               >
-                Get early access
+                Follow the build
               </a>
               <a
                 href="#how"
@@ -475,7 +480,7 @@ function Faq() {
   const items: [string, string][] = [
     [
       "Is Workfolk available yet?",
-      "Not publicly yet — Workfolk is in development. Join the early-access list and you'll be first in when it opens.",
+      "Not publicly yet — Workfolk is in development, being built in the open. Follow along on X for updates.",
     ],
     [
       "How is this different from a chatbot?",
@@ -491,7 +496,7 @@ function Faq() {
     ],
     [
       "What will it cost?",
-      "Pricing hasn't been announced. Joining the early-access list is free and doesn't commit you to anything.",
+      "Pricing hasn't been announced.",
     ],
   ];
   return (
@@ -533,19 +538,28 @@ function Access() {
       <div className="bg-blueprint absolute inset-0 rotate-180" aria-hidden />
       <div className="relative mx-auto max-w-3xl px-5 py-28 text-center sm:px-8">
         <Reveal>
-          <Eyebrow>Early access</Eyebrow>
+          <Eyebrow>In development</Eyebrow>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-cream sm:text-5xl">
             Keep the ambition.
             <br />
             Share the workload.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg text-muted">
-            Be first in when Workfolk opens. Tell us what you'd hand off
-            first — then get back to the work only you can do.
+            Workfolk is being built in the open. Follow along for build
+            updates, demos, and the story as it comes together.
           </p>
-          <AccessForm />
+          <div className="mt-9 flex justify-center">
+            <a
+              href={X_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-amber-400 px-8 py-3.5 text-sm font-semibold text-ink transition-transform hover:scale-[1.03] active:scale-95"
+            >
+              Follow the build on X
+            </a>
+          </div>
           <p className="mt-4 font-mono text-xs text-faint">
-            Free to join · No commitment
+            @bobbybacklogs · building in public
           </p>
         </Reveal>
       </div>
